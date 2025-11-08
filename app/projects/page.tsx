@@ -2,6 +2,21 @@ type Project = { title: string; desc: string; stack: string[]; link?: string };
 
 const projects: Project[] = [
   {
+    title: "Rift Rewind 2025 — Are You The Problem?",
+    desc: "Hackathon team submission (Oct 2025). Built an AI-driven League of Legends analytics platform that generates personalized gameplay insights using AWS Bedrock and the Riot Games API. Developed a full-stack Next.js app with dynamic dashboards and deployed via Vercel with GitHub CI/CD.",
+    stack: [
+      "Next.js",
+      "React",
+      "TailwindCSS",
+      "Node.js",
+      "AWS Bedrock",
+      "Riot Games API",
+      "Vercel",
+      "GitHub Actions",
+    ],
+    link: "#",
+  },
+  {
     title: "Super Smash Bros Replica",
     desc: "Developed a Super Smash Bros replica in Python, coordinating team efforts to emulate the game mechanics. Designed architecture, implemented character movement and combat, integrated audio-visual elements, and optimized performance. Demonstrated expertise in Python programming, game development, and teamwork.",
     stack: ["Python", "Game Development"],
@@ -33,17 +48,48 @@ const projects: Project[] = [
 
 export default function Projects() {
   return (
-    <section>
-      <h2 className="text-3xl font-bold mb-6">Projects</h2>
-      <div className="grid gap-4 md:grid-cols-2">
+    <section className="space-y-6">
+      <h2 className="text-3xl sm:text-4xl font-bold text-center sm:text-left animate-fade-in-up">
+        Projects
+      </h2>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 animate-children">
         {projects.map(p => (
-          <article key={p.title} className="rounded-2xl border border-gray-800 p-5 hover:border-gray-600 transition">
-            <h3 className="text-xl font-semibold mb-2">{p.title}</h3>
-            <p className="text-gray-300 mb-3">{p.desc}</p>
-            <div className="flex flex-wrap gap-2 text-xs">
-              {p.stack.map(t => <span key={t} className="rounded-full bg-gray-800 px-2 py-1">{t}</span>)}
+          <article
+            key={p.title}
+            className="rounded-xl border border-[var(--card-border)] bg-[var(--card-bg)]
+                       p-5 sm:p-6 shadow-sm hover:shadow-lg transition-all duration-300
+                       animate-expand-hover hover:glow cursor-pointer group"
+          >
+            <h3 className="text-xl font-semibold group-hover:text-[var(--accent-light)] transition-colors duration-300">
+              {p.title}
+            </h3>
+            <p className="mt-2 text-sm sm:text-base text-[var(--text-secondary)]">{p.desc}</p>
+
+            <div className="mt-3 flex flex-wrap gap-2 text-xs sm:text-sm">
+              {p.stack.map((t, i) => (
+                <span
+                  key={t}
+                  className="rounded-full border border-[var(--card-border)]
+                             px-2 py-1 bg-white/40 dark:bg-white/5 transition-all duration-300
+                             hover:bg-[var(--accent)]/20 hover:border-[var(--accent)] hover:scale-110"
+                  style={{
+                    transitionDelay: `${i * 30}ms`,
+                  }}
+                >
+                  {t}
+                </span>
+              ))}
             </div>
-            {p.link && <a href={p.link} className="text-sm underline mt-3 inline-block">View</a>}
+
+            {p.link && (
+              <a
+                href={p.link}
+                className="mt-4 inline-block text-sm underline hover:opacity-80 transition-opacity duration-200"
+              >
+                View →
+              </a>
+            )}
           </article>
         ))}
       </div>
