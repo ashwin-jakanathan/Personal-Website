@@ -28,7 +28,7 @@ const projects: Project[] = [
     title: "Serverless Portfolio Backend",
     desc: "Contact form API with monitoring (CloudWatch) + alerts (SNS).",
     stack: ["API Gateway","Lambda (Python)","DynamoDB","SES","Terraform"],
-    link: "#",
+    link: "https://ashwin-jakanathan.vercel.app/",
   },
   {
     title: "Bookstore Management",
@@ -39,7 +39,6 @@ const projects: Project[] = [
     title: "Super Smash Bros Replica",
     desc: "Developed a Super Smash Bros replica in Python, coordinating team efforts to emulate the game mechanics. Designed architecture, implemented character movement and combat, integrated audio-visual elements, and optimized performance. Demonstrated expertise in Python programming, game development, and teamwork.",
     stack: ["Python", "Game Development"],
-    link: "#"
   },
   {
     title: "Student Course Planner",
