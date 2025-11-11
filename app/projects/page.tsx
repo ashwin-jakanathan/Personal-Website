@@ -12,26 +12,11 @@ type Project = {
 };
 
 const projects: Project[] = [
-  {
-    title: "Rift Rewind 2025 — Are You The Problem?",
-    desc: "Hackathon team submission (Oct 2025). Built an AI-driven League of Legends analytics platform that generates personalized gameplay insights using AWS Bedrock and the Riot Games API. Developed a full-stack Next.js app with dynamic dashboards and deployed via Vercel with GitHub CI/CD.",
-    stack: [
-      "Next.js",
-      "React",
-      "TailwindCSS",
-      "Node.js",
-      "AWS Bedrock",
-      "Riot Games API",
-      "Vercel",
-      "GitHub Actions",
-    ],
-    link: "#",
-  },
-  {
-    title: "Super Smash Bros Replica",
-    desc: "Developed a Super Smash Bros replica in Python, coordinating team efforts to emulate the game mechanics. Designed architecture, implemented character movement and combat, integrated audio-visual elements, and optimized performance. Demonstrated expertise in Python programming, game development, and teamwork.",
-    stack: ["Python", "Game Development"],
-    link: "#"
+  { 
+    title: "League Insights AI (Rift Rewind)",
+    desc: "Hackathon submission analyzing a full year of League of Legends match history. Generates detailed performance stats, timeline analytics (early game, midgame, throws, comebacks), kill heatmaps, monthly trends, and an AI-generated season recap using Amazon Bedrock. Built with Riot API, PostgreSQL for analytics, and asynchronous data processing.",
+    stack: ["Next.js", "React", "TypeScript", "TailwindCSS", "Framer Motion", "Recharts", "Flask", "Python", "PostgreSQL", "Riot Games API", "Amazon Bedrock", "aiohttp", "Vercel", "Render"],
+    link: "https://devpost.com/software/league-of-eshwar",
   },
   {
     title: "E-Commerce Database Application",
@@ -49,6 +34,12 @@ const projects: Project[] = [
     title: "Bookstore Management",
     desc: "Java OOP + State Pattern with persistent file storage.",
     stack: ["Java","OOP","State Pattern","File I/O"],
+  },
+  {
+    title: "Super Smash Bros Replica",
+    desc: "Developed a Super Smash Bros replica in Python, coordinating team efforts to emulate the game mechanics. Designed architecture, implemented character movement and combat, integrated audio-visual elements, and optimized performance. Demonstrated expertise in Python programming, game development, and teamwork.",
+    stack: ["Python", "Game Development"],
+    link: "#"
   },
   {
     title: "Student Course Planner",
