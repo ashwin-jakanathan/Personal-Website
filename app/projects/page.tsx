@@ -16,7 +16,7 @@ const projects: Project[] = [
     title: "League Insights AI (Rift Rewind)",
     desc: "Hackathon submission analyzing a full year of League of Legends match history. Generates detailed performance stats, timeline analytics (early game, midgame, throws, comebacks), kill heatmaps, monthly trends, and an AI-generated season recap using Amazon Bedrock. Built with Riot API, PostgreSQL for analytics, and asynchronous data processing.",
     stack: ["Next.js", "React", "TypeScript", "TailwindCSS", "Framer Motion", "Recharts", "Flask", "Python", "PostgreSQL", "Riot Games API", "Amazon Bedrock", "aiohttp", "Vercel", "Render"],
-    link: "https://devpost.com/software/league-of-eshwar",
+    link: "https://league-insights-ai.vercel.app/",
   },
   {
     title: "E-Commerce Database Application",
